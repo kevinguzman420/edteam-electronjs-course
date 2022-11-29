@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <!-- FONTAWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- TAILWINDCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+</head>
+
+<body>
+  <!-- container -->
+  <div class="flex h-screen bg-red-900 font-oswald box-border">
+    <!-- menu -->
+    <div class="w-[300px] text-white bg-slate-800">
+      <figure class="flex items-center mx-auto mb-6 h-[100px] w-[95%] border-b border-slate-600">
+        <img class=" w-[90%] h-auto" src="../imgs/logo-edteam.png" alt="">
+      </figure>
+      <div>
+        <button onclick="home()"
+          class="flex items-center mb-4 w-full h-[40px] pl-3 hover:bg-slate-700 hover:cursor-pointer">
+          <i class="mr-4 fa-solid fa-house"></i>
+          Inicio
+        </button>
+        <button onclick="products()"
+          class="flex items-center mb-4 w-full h-[40px] pl-3 hover:bg-slate-700 hover:cursor-pointer">
+          <i class="mr-4 fa-solid fa-cart-shopping"></i>
+          Productos
+        </button>
+        <button onclick="create_product()"
+          class="flex items-center w-full h-[40px] pl-3 hover:bg-slate-700 hover:cursor-pointer">
+          <i class="mr-4 fa-solid fa-plus"></i>
+          Crear Producto
+        </button>
+      </div>
+    </div>
+    <!-- main -->
+    <div id="main" class="w-full h-[100%] bg-slate-900">
+      <div class="flex flex-col justify-center items-center w-full h-full text-white">
+        <figure class="mb-3">
+          <img src="../imgs/electron-logo.png" alt="" width="250" height="250">
+        </figure>
+        <p class="mb-1 text-2xl font-light">Curso de Electron JS</p>
+        <h2 class="text-2xl">EDteam</h2>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/index.js"></script>
+</body>
+
+</html>

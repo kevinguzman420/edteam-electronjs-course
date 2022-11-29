@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <!-- FONTAWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- TAILWINDCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+             .content-auto {
+               content-visibility: auto;
+             }
+           }
+         </style>
+
+  <link rel="stylesheet" href="../css/create_product.css">
+</head>
+
+<body>
+  <div class="flex justify-center items-center w-full h-screen text-white bg-slate-900">
+    <form id="productForm" class="px-4 py-6 w-[500px] bg-slate-800">
+      <h3 class="mb-7 text-2xl">Datos del producto</h3>
+      <div class="mb-5">
+        <label htmlFor="">Producto</label> <br /><input id="name" class="w-full text-black" type="text"
+          placeholder="Ingresar nombre de producto" />
+      </div>
+      <div class="mb-5">
+        <label htmlFor="">Descripción</label> <br />
+        <input id="description" class="w-full text-black" type="text" placeholder="Ingresar descripción de producto" />
+      </div>
+      <div class="mb-5">
+        <label htmlFor="">Precio</label> <br />
+        <input id="price" class="w-full text-black" type="text" placeholder="Ingresar precio de producto" />
+      </div>
+      <button class="mt-2 py-2 w-[50%] bg-gray-900" type="submit">Proceder</button>
+    </form>
+  </div>
+
+  <script src="../js/create_product.js"></script>
+</body>
+
+</html>
